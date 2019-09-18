@@ -22,7 +22,7 @@ const ServicesSection = () => {
       <div className="overflow-hidden">
         <Parallax>
           <Image
-          className="jarallax-img"
+            className="jarallax-img"
             style={{
               minHeight: `30rem`,
               height: `100%`,

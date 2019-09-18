@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Parallax } from 'react-scroll-parallax';
+import Image from 'gatsby-image';
 
 import FacebookIcon from './icons/Facebook';
 import InstagramIcon from './icons/Instagram';
 import InstagramWidget from './Instagram';
-import ContactImg from './ContactImg';
 import Form from './Form';
 import Parallax from './Parallax';
-
 
 const Contact = ({ data }) => {
   return (

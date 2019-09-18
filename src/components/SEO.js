@@ -78,7 +78,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         )
         .concat(meta)}
     >
-        <script src="https://unpkg.com/jarallax@1.10/dist/jarallax.min.js"></script>
+      {/* <script src="https://unpkg.com/jarallax@1.10/dist/jarallax.min.js"></script> */}
     </Helmet>
   );
 }

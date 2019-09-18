@@ -4,16 +4,14 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-exports.onCreateWebpackConfig = ({
-  actions,
-}) => {
+exports.onCreateWebpackConfig = ({ actions }) => {
   const { setWebpackConfig } = actions;
   setWebpackConfig({
     externals: {
       jquery: 'jQuery', // important: 'Q' capitalized
-    }
-  })
-}
+    },
+  });
+};
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
   const results = await graphql(`

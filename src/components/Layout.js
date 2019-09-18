@@ -21,6 +21,7 @@ const Layout = ({ children, home }) => (
 
 Layout.propTypes = {
   children: PropTypes.node,
+  home: PropTypes.bool,
 };
 
 export default Layout;

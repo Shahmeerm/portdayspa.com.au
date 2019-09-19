@@ -30,6 +30,7 @@ module.exports = {
         ],
       },
       colors: {
+        'transparent-black': 'hsla(0, 0%, 13%, 0.5)',
         gray: {
           '100': '#F7F7F7',
           '200': '#DCDCDC',
@@ -46,6 +47,7 @@ module.exports = {
   },
   variants: {
     borderWidth: ['responsive', 'first', 'last', 'hover', 'focus'],
+    opacity: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
   },
   plugins: [],
 };

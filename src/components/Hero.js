@@ -43,10 +43,10 @@ const Hero = () => {
   ];
   return (
     <div className="overflow-hidden relative">
-      <div className="max-w-6xl ml-auto">
+      <div className="max-w-6xl mx-auto">
         <Parallax>
           <Image
-            className="jarallax-img"
+            className="jarallax-img opacity-75 sm:opacity-100"
             style={{
               minHeight: `30rem`,
               height: `100%`,

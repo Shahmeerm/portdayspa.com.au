@@ -47,9 +47,9 @@ const Hero = () => {
       <div className="max-w-6xl ml-auto">
         <AsyncParallax>
           <Image
-            className="jarallax-img"
+            className="jarallax-img hero-cover"
             style={{
-              minHeight: `30rem`,
+              minHeight: `100%`,
               height: `100%`,
             }}
             fluid={sources}

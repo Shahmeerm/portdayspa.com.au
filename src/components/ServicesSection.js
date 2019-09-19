@@ -26,9 +26,9 @@ const ServicesSection = () => {
           <Image
             className="jarallax-img"
             style={{
-              minHeight: `30rem`,
+              minHeight: `100%`,
               height: `100%`,
-              maxHeight: `50rem`,
+              maxHeight: `100%`,
               width: `100%`,
             }}
             fluid={data.file.childImageSharp.fluid}

@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import Loader from './Loader';
 
-export default function asyncComponent(importComponent, asyncProps = null) {
+export default function asyncComponent(
+  importComponent,
+  asyncProps = null,
+  isLoaderActive = false
+) {
   class AsyncComponent extends Component {
     constructor(props) {
       super(props);
@@ -20,8 +25,13 @@ export default function asyncComponent(importComponent, asyncProps = null) {
 
     render() {
       const C = this.state.component;
-
-      return C ? <C {...this.props} {...asyncProps} /> : <></>; // You can place a loader here if wanted.
+      return C ? (
+        <C {...this.props} {...asyncProps} />
+      ) : isLoaderActive ? (
+        <Loader />
+      ) : (
+        <></>
+      ); // You can place a loader here if wanted.
     }
   }
 

@@ -1,16 +1,20 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import HeroNav from '../components/HeroNav';
 import Hero from '../components/Hero';
 import Why from '../components/Why';
 import ServicesSection from '../components/ServicesSection';
-import GiftVoucher from '../components/GiftVoucher';
 import ContactHome from '../components/ContactHome';
 import Map from '../components/Map';
+
+import AsynComponent from '../components/AsyncComponent';
+
+const AsyncGiftVoucher = AsynComponent(() =>
+  import('../components/GiftVoucher')
+);
 
 const IndexPage = ({ data }) => {
   return (
@@ -21,7 +25,7 @@ const IndexPage = ({ data }) => {
       <Layout home>
         <Why />
         <ServicesSection />
-        <GiftVoucher />
+        <AsyncGiftVoucher />
         <ContactHome data={data} />
         <Map />
       </Layout>

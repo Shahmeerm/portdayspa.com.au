@@ -35,7 +35,7 @@ const GiftVoucher = () => {
       <AsyncParallax>
         <Image
           className="w-full jarallax-img"
-          style={{ minHeight: `30rem`, height: `100%`, maxHeight: `50rem` }}
+          style={{ minHeight: `100%`, height: `100%`, maxHeight: `100%` }}
           fluid={data.hero.childImageSharp.fluid}
           loading="eager"
         />

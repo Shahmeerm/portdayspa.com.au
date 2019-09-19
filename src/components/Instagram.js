@@ -5,7 +5,7 @@ import Image from 'gatsby-image';
 const Instagram = () => {
   const data = useStaticQuery(graphql`
     query InstagramQuery {
-      allInstaNode {
+      allInstaNode(sort: { fields: timestamp, order: DESC }) {
         edges {
           node {
             id
@@ -48,6 +48,9 @@ const Instagram = () => {
               key={photo.node.id}
               alt={photo.node.caption}
             />
+            <div className="absolute bg-transparent-black break-words inset-0 leading-snug p-4 opacity-0 overflow-y-auto overflow-x-hidden text-white active:opacity-100 focus:opacity-100 hover:opacity-100">
+              {photo.node.caption}
+            </div>
           </div>
         </a>
       ))}

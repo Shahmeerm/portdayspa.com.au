@@ -1,24 +1,25 @@
 import React from 'react';
 import Image from 'gatsby-image';
 import PropTypes from 'prop-types';
-
-import Parallax from './Parallax';
 import FacebookIcon from './icons/Facebook';
 import InstagramIcon from './icons/Instagram';
 import InstagramWidget from './Instagram';
 import Form from './Form';
+import AsyncComponent from './AsyncComponent';
+
+const AsyncParallax = AsyncComponent(() => import('./Parallax'));
 
 const ContactHome = ({ data }) => {
   return (
     <div className="overflow-hidden relative z-10">
-      <Parallax>
+      <AsyncParallax>
         <Image
           className="w-full jarallax-img"
           style={{ minHeight: `30rem`, height: `100%`, maxHeight: `50rem` }}
           fluid={data.hero.childImageSharp.fluid}
           loading="eager"
         />
-      </Parallax>
+      </AsyncParallax>
       <article id="contact" className="bg-white px-4 py-24 relative w-full">
         <div className="flex flex-wrap max-w-6xl mx-auto">
           <div className="flex flex-1 flex-col px-4 w-full md:w-1/2">

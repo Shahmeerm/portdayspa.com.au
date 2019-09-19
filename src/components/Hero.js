@@ -1,9 +1,10 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
-
-import Parallax from './Parallax';
 import Logo from './Logo';
+import AsyncComponent from './AsyncComponent';
+
+const AsyncParallax = AsyncComponent(() => import('./Parallax'));
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -44,7 +45,7 @@ const Hero = () => {
   return (
     <div className="overflow-hidden relative">
       <div className="max-w-6xl ml-auto">
-        <Parallax>
+        <AsyncParallax>
           <Image
             className="jarallax-img"
             style={{
@@ -54,7 +55,7 @@ const Hero = () => {
             fluid={sources}
             loading="eager"
           />
-        </Parallax>
+        </AsyncParallax>
       </div>
       <div className="absolute flex flex-col font-sans inset-0 px-16 py-8 text-gray-700">
         <div className="flex flex-1 flex-col items-center justify-center max-w-xl mx-auto text-center w-full sm:mt-20">

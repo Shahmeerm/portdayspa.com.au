@@ -2,7 +2,9 @@ import React from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 
-import Parallax from './Parallax';
+import AsyncComponent from './AsyncComponent';
+
+const AsyncParallax = AsyncComponent(() => import('./Parallax'));
 
 const GiftVoucher = () => {
   const data = useStaticQuery(graphql`
@@ -30,14 +32,14 @@ const GiftVoucher = () => {
   `);
   return (
     <div className="overflow-hidden">
-      <Parallax>
+      <AsyncParallax>
         <Image
           className="w-full jarallax-img"
           style={{ minHeight: `30rem`, height: `100%`, maxHeight: `50rem` }}
           fluid={data.hero.childImageSharp.fluid}
           loading="eager"
         />
-      </Parallax>
+      </AsyncParallax>
       <article
         id="gift-voucher"
         className="bg-white px-4 md:px-6 py-24 relative w-full z-10"

@@ -43,19 +43,17 @@ const Hero = () => {
   ];
   return (
     <div className="overflow-hidden relative">
-      <div className="max-w-6xl mx-auto">
-        <Parallax>
-          <Image
-            className="jarallax-img opacity-75 sm:opacity-100"
-            style={{
-              minHeight: `30rem`,
-              height: `100%`,
-            }}
-            fluid={sources}
-            loading="eager"
-          />
-        </Parallax>
-      </div>
+      <Parallax>
+        <Image
+          className="jarallax-img opacity-75 sm:opacity-100"
+          style={{
+            minHeight: `30rem`,
+            height: `100%`,
+          }}
+          fluid={sources}
+          loading="eager"
+        />
+      </Parallax>
       <div className="absolute flex flex-col font-sans inset-0 px-16 py-8 text-gray-700">
         <div className="flex flex-1 flex-col items-center justify-center max-w-xl mx-auto text-center w-full sm:mt-20">
           <h1 className="w-full">

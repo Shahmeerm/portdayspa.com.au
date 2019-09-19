@@ -47,7 +47,7 @@ const Hero = () => {
       <div className="max-w-6xl ml-auto">
         <AsyncParallax>
           <Image
-            className="jarallax-img hero-cover"
+            className="jarallax-img opacity-75 sm:opacity-100"
             style={{
               minHeight: `100%`,
               height: `100%`,
